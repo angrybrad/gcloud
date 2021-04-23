@@ -1,0 +1,31 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: web
+  whitelist_functions: "proc_open,proc_close"
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+manual_scaling:
+  instances: 1
+
+env_variables:
+  ENVIRONMENT: "dev"
+  GOOGLE_STORAGE_BUCKET: "craft-309518.appspot.com"
+  APP_ID: "12345"
+  SECURITY_KEY: "abcde"
+  DB_SERVER: "localhost"
+  DB_DATABASE: "craft"
+  DB_DRIVER: "mysql"
+  DB_USER: "root"
+  DB_PASSWORD: "letmeinnow"
+  DB_TABLE_PREFIX: "craft"
+  DB_SOCKET: "/cloudsql/craft-309518:us-west1:craft-gcloud"
+
+beta_settings:
+  cloud_sql_instances: "craft-309518:us-west1:craft-gcloud"
+
+
