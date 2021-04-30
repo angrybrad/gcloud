@@ -4,6 +4,7 @@ env: flex
 runtime_config:
   document_root: web
   whitelist_functions: "proc_open,proc_close"
+  nginx_conf_override: nginx.conf
 
 # Ensure we skip ".env", which is only for local development
 skip_files:
