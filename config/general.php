@@ -37,5 +37,5 @@ return [
 
     'resourceBasePath' => '@storage/cpresources',
 
-    'usePathInfo' => false
+    'requireUserAgentAndIpForSession' => false,
 ];

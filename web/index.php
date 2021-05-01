@@ -22,16 +22,7 @@ define('CRAFT_STORAGE_PATH', sys_get_temp_dir());
 define('CRAFT_STREAM_LOG', true);
 define('CRAFT_EPHEMERAL', true);
 
-$storage = new \Google\Cloud\Storage\StorageClient();
-$storage->registerStreamWrapper();
-
 // Load and run Craft
 /** @var craft\web\Application $app */
 $app = require CRAFT_VENDOR_PATH . '/craftcms/cms/bootstrap/web.php';
-
-//try {
-    $app->run();
-//} catch (\Exception $e) {
-//    die($app->getDb()->dsn);
-//}
-
+$app->run();

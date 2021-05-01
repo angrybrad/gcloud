@@ -24,12 +24,5 @@ return [
     'modules' => [
         'my-module' => \modules\Module::class,
     ],
-//    'components' => [
-//        'assetManager' => function() {
-//            $config = craft\helpers\App::assetManagerConfig();
-//            $config['linkAssets'] = true;
-//            return Craft::createObject($config);
-//        },
-//    ]
     //'bootstrap' => ['my-module'],
 ];
